@@ -7,7 +7,7 @@ export const App = () => {
   return (
     <Layout>
       <Header title="Hello world!" />
-      <LoginForm />
+      {/* <LoginForm /> */}
       {/* <Posts /> */}
     </Layout>
   );

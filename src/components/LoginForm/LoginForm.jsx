@@ -6,43 +6,47 @@ export class LoginForm extends Component {
     password: '',
   };
 
-  handleChangeEmail = (event) => {
-    this.setState({ email: event.target.value });
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
   };
 
-  handleChangePassword = (event) => {
-    this.setState({ password: event.target.value });
-  };
-
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
+
     console.log(this.state);
+    this.setState({ email: '', password: '' });
   };
 
   render() {
     const { email, password } = this.state;
+
     return (
       <form className="w-25" onSubmit={this.handleSubmit}>
         <div className="mb-3">
-          <label className="from-lable">
+          <label htmlFor="email" className="form-label">
             <p>Email address</p>
-            <input
-              type="text"
-              className="form-color"
-              value={email}
-              onChange={this.handleChangeEmail}
-            />
           </label>
+
+          <input
+            id="email"
+            type="text"
+            className="form-control"
+            name="email"
+            value={email}
+            onChange={this.handleChange}
+          />
         </div>
 
         <div className="mb-3">
-          <label className="from-lable">
+          <label className="form-label">
             <p>Password</p>
             <input
               type="text"
-              className="form-color"
+              className="form-control"
+              name="password"
               value={password}
-              onChange={this.handleChangePassword}
+              onChange={this.handleChange}
             />
           </label>
         </div>
