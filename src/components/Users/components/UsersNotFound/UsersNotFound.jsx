@@ -1,4 +1,4 @@
-import image from './713761_big_8857bc5285.jpeg';
+import image from './713761_big_8857bc5285.jpg';
 
 export const UsersNotFound = () => {
   return (

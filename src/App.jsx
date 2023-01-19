@@ -1,7 +1,6 @@
 import { Header } from './components/Layout/Header/Header';
 import { Layout } from './components/Layout/Layout';
-// import { LoginForm } from './components/LoginForm/LoginForm';
-// import { Posts } from './components/Posts/Posts';
+import { Users } from './components/Users/Users';
 
 export const App = () => {
   return (
@@ -9,6 +8,7 @@ export const App = () => {
       <Header title="Hello world!" />
       {/* <LoginForm /> */}
       {/* <Posts /> */}
+      <Users />
     </Layout>
   );
 };

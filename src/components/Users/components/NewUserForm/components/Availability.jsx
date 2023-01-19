@@ -11,7 +11,6 @@ export class Availability extends Component {
 
   render() {
     const { isOpenToWork, onChange } = this.props;
-
     return (
       <fieldset className="mt-3">
         <legend className="h6">Availability:</legend>
