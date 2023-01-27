@@ -19,7 +19,8 @@ export class NewUserForm extends Component {
   };
 
   render() {
-    const { name, email, bio, isOpenToWork } = this.state;
+    const { name, email, bio } = this.state;
+
     return (
       <form action="#" autoComplete="off" className="w-100">
         <GeneralInfo
@@ -29,7 +30,7 @@ export class NewUserForm extends Component {
           onChange={this.handleChaneGeneralInfo}
         />
 
-        <Availability isOpenToWork={isOpenToWork} onChange={this.handleChangeisOpenToWork} />
+        <Availability onChange={this.handleChangeisOpenToWork} />
 
         <Skills />
 

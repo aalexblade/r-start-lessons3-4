@@ -42,6 +42,7 @@ export class Users extends Component {
           className="btn btn-primary mb-4"
           type="button"
           onClick={this.handleToggle}
+
         >
           Create new user
         </button>
