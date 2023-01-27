@@ -18,8 +18,12 @@ export class NewUserForm extends Component {
     this.setState({ [name]: value });
   };
 
+  handleChangeisOpenToWork = () => {
+    this.setState(prevState => ({ isOpenToWork: !prevState.isOpenToWork }));
+  };
+
   render() {
-    const { name, email, bio } = this.state;
+    const { name, email, bio, isOpenToWork } = this.state;
 
     return (
       <form action="#" autoComplete="off" className="w-100">
@@ -30,7 +34,10 @@ export class NewUserForm extends Component {
           onChange={this.handleChaneGeneralInfo}
         />
 
-        <Availability onChange={this.handleChangeisOpenToWork} />
+        <Availability
+          isOpenToWork={isOpenToWork}
+          onChange={this.handleChangeisOpenToWork}
+        />
 
         <Skills />
 

@@ -1,16 +1,13 @@
 import { Component } from 'react';
 
 export class Availability extends Component {
-  state = {
-    isOpenToWork: false,
-  };
-
-  handleChange = () => {
-    this.setState(prevState => ({ isOpenToWork: !prevState.isOpenToWork }));
-  };
+  // state = {
+  //   isOpenToWork: false,
+  // };
 
   render() {
-    const { isOpenToWork } = this.state;
+    const { isOpenToWork, onChange } = this.props;
+
     return (
       <fieldset className="mt-3">
         <legend className="h6">Availability:</legend>
@@ -22,7 +19,7 @@ export class Availability extends Component {
               className="form-check-input"
               type="checkbox"
               checked={isOpenToWork}
-              onChange={this.handleChange}
+              onChange={onChange}
 
             />
           </label>
