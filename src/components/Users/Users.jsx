@@ -21,7 +21,7 @@ export class Users extends Component {
     this.setState({ users });
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(_, prevState) {
     if (
       prevState.users.lenght !== 0 &&
       prevState.users.lenght !== this.state.users.length

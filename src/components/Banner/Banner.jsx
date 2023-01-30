@@ -4,14 +4,17 @@ import { Modal } from '../Modal/Modal';
 
 import { BannerModal } from './BannerModal';
 
-const isOpen = false;
-
 export class Banner extends Component {
-  componentDidMount() {
-    console.log('componentDidMount');
-  }
+  state = {
+    isOpen: false,
+  };
+
+  toggle = () => {
+    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+  };
 
   render() {
+    const { isOpen } = this.state;
     return (
       <>
         <div className="p-5 mb-4 bg-light rounded-3">
@@ -24,6 +27,7 @@ export class Banner extends Component {
               liking.
             </p>
             <button
+              onClick={this.toggle}
               className="btn btn-primary btn-lg mt-5"
               type="button"
             >
